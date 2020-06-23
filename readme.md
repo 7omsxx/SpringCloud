@@ -30,6 +30,16 @@ linux和mac下可在项目根目录下执行 `./install.sh` 快速搭建开发�
 
 ### 编译 & 启动
 
+1、安装python-pip
+
+yum -y install epel-release
+
+yum -y install python-pip
+
+2、安装docker-compose
+
+pip install docker-compose
+
 * 1.启动基础服务：进入docker-compose目录，执行`docker-compose -f docker-compose.yml up` 或单个启动`docker-compose up 服务名`, 服务名如下
 
 在启动应用之前，需要先启动数据库、缓存、MQ等中间件，可根据自己需要启动的应用选择启动某些基础组件，一般来说启动mysql、redis、rabbitmq即可，其它组件若有需要，根据如下命令启动即可。

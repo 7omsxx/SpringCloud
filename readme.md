@@ -35,6 +35,7 @@ linux和mac下可在项目根目录下执行 `./install.sh` 快速搭建开发�
 yum -y install epel-release
 
 yum -y install python-pip
+sudo pip install --ignore-installed xxx
 
 2、安装docker-compose
 
@@ -150,96 +151,4 @@ gateway-admin可动态调整gateway-web的路由策略，测试前请先配置�
 
 |  服务     | 使用技术                 |   进度        |    备注   |
 |----------|-------------------------|---------------|-----------|
-|  注册中心 | Nacos                   |   ✅          |           |
-|  配置中心 | Nacos                   |   ✅          |           |
-|  消息总线 | SpringCloud Bus+Rabbitmq|   ✅          |           |
-|  灰度分流 | OpenResty + lua         |   🏗          |           |
-|  动态网关 | SpringCloud Gateway     |   ✅          |  多种维度的流量控制（服务、IP、用户等），后端可配置化🏗          |
-|  授权认证 | Spring Security OAuth2  |   ✅          |  Jwt模式   |
-|  服务容错 | SpringCloud Sentinel    |   ✅          |           |
-|  服务调用 | SpringCloud OpenFeign   |   ✅          |           |
-|  对象存储 | FastDFS/Minio           |   🏗          |           |
-|  任务调度 | Elastic-Job             |   🏗          |           |
-|  分库分表 | Mycat                   |   🏗          |           |
-|  数据权限 |                         |   🏗          |  使用mybatis对原查询做增强，业务代码不用控制，即可实现。         |
-
-### 平台功能
-
-|  服务     | 使用技术     |   进度         |    备注   |
-|----------|-------------|---------------|-----------|
-|  用户管理 | 自开发       |   ✅          |  用户是系统操作者，该功能主要完成系统用户配置。          |
-|  角色管理 | 自开发       |   ✅          |  角色菜单权限分配、设置角色按机构进行数据范围权限划分。   |
-|  菜单管理 | 自开发       |   🏗          |  配置系统菜单，操作权限，按钮权限标识等。               |
-|  机构管理 | 自开发       |   🏗          |  配置系统组织机构，树结构展现，可随意调整上下级。        |
-|  网关动态路由 | 自开发    |   🏗          |  网关动态路由管理                                     |
-
-### 开发运维
-
-|  服务     | 使用技术                 |   进度         |    备注   |
-|----------|-------------------------|---------------|-----------|
-|  代码生成 |                         |   🏗          |  前后端代码的生成，支持Vue         |
-|  测试管理 |                         |   🏗          |           |
-|  文档管理 | Swagger2                |   ✅          |           |
-|  服务监控 | Spring Boot Admin       |   ✅          |           |
-|  链路追踪 | SkyWalking              |   ✅          |           |
-|  操作审计 |                         |   🏗          |  系统关键操作日志记录和查询         |
-|  日志管理 | ES + Kibana、Zipkin     |   ✅          |           |
-|  监控告警 | Grafana                 |   ✅          |           |
-
-## 更新日志
-
-**2019-10-18：** 
-
-1.使用nacos替代eureka为服务的注册中心
-
-2.使用nacos替代apollo为服务的配置中心
-
-3.引入使用sentinel替换掉hystrix，引入sentinel-dashboard
-
-4.使用jetcache作两级缓存，优化缓存性能
-
-5.网关启动时加载数据库中的路由到redis缓存
-
-6.其它已知bug修复
-
-## 联系交流
-
-### 加入贡献代码
-
-请入群 [请戳这里](https://github.com/zhoutaoo/SpringCloud/wiki) 加群主微信。
-
-### 请作者喝饮料
-
-如果你觉的有帮助到您，可以请作者喝饮料，这样更有动力，谢谢。
-
-<p align="left">
-  <img width="300" src="https://user-images.githubusercontent.com/3946731/67401177-58eec300-f5e1-11e9-97e6-9ae29e3523e0.jpeg">
-  
-  <img width="300" src="https://user-images.githubusercontent.com/3946731/67401198-60ae6780-f5e1-11e9-8c30-c12bd598011b.jpeg">
-</p>
-
-### 学习交流
-
-EMail：zhoutaoo@foxmail.com
-
-群1、2、3、4、5、6、7、8、9已满，请加群10，加群[请戳这里](https://github.com/zhoutaoo/SpringCloud/wiki)
-
-  此些群仅为技术交流群，请大家不要讨论政治、发广告等与技术无关的东西。大家如若有问题可以在群里直接发问，我会抽空答复。
-
-请大家问问题时尽量描述清楚背景与问题关键信息，描述的越清楚越容易得到答案。也更容易判断问题可能点，节省判断的时间，而不用来回问答。
-
-同时也鼓励群友们积极回复已知的问题，大家相互帮助共同成长。如有bug或新需求也可以直接提交issue到github，我会酌情处理。
-
-如果你发现你的问题很久都没有人答复，那很有可能就是问题描述的不够清楚，别人无法回复。
-
-**问问题的三要素**
-
-1. 说明背景，使用了哪个模块，要做什么？ 
-
-2. 怎么输入或操作的得到了什么结果？ 截图，日志
-
-3. 哪里不明白或有什么疑问 ？
-
-## Stargazers over time
- 
-[![Stargazers over time](https://starchart.cc/zhoutaoo/SpringCloud.svg)](https://starchart.cc/zhoutaoo/SpringCloud)
+|  注册中心 | Nacos                   |   

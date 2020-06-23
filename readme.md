@@ -36,10 +36,12 @@ yum -y install epel-release
 
 yum -y install python-pip
 sudo pip install --ignore-installed xxx
+pip install -I python-ldap==3.0.0b1
 
 2、安装docker-compose
 
 pip install docker-compose
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple docker-compose
 
 * 1.启动基础服务：进入docker-compose目录，执行`docker-compose -f docker-compose.yml up` 或单个启动`docker-compose up 服务名`, 服务名如下
 

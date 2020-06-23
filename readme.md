@@ -31,7 +31,8 @@ linux和mac下可在项目根目录下执行 `./install.sh` 快速搭建开发�
 ### 编译 & 启动
 
 1、安装python-pip
-
+安装docker
+https://blog.csdn.net/qq_36792209/article/details/102727140
 yum -y install epel-release
 
 yum -y install python-pip
